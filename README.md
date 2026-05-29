@@ -14,6 +14,7 @@ The goal is to:
 
 - Arrays
 - Strings
+- Stack
 - Linked List
 
 ---
@@ -23,6 +24,8 @@ The goal is to:
 ```text
 Arrays/
 Strings/
+Stacks/
+Real_World_Problem/
 ```
 
 ---
