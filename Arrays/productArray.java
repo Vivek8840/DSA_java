@@ -28,7 +28,7 @@ SpaceComplexity :O(n);
 */
 public class productArray{
     public static int[] findproduct(int nums[]){
-        int n=nums.lenght;
+        int n=nums.length;
         int res[]=new int[n];
         // res[i]=prefix[i-1]*suffix[i+1];
         int prefix[]=new int[n];
@@ -60,12 +60,12 @@ SpaceComplexity :O(1);
     */
  public static int[] findproduct2(int nums[]){
     int n=nums.length;
-    int res[]=new int[];
+    int res[]=new int[n];
     res[0]=1;
- 
+
  for(int i=1;i<n;i++){
     res[i]=res[i-1]*nums[i-1];
-    prefix*=nums[i];
+   
  }
 int suffix=1;
 for(int i=n-1;i>0;i--){
@@ -73,12 +73,12 @@ for(int i=n-1;i>0;i--){
     suffix*=nums[i];
 }
 
-
+return res;
  }
  // OR
   public static int[] findproduct3(int nums[]){
     int n=nums.length;
-    int res[]=new int[];
+    int res[]=new int[n];
  int prefix=1;
  for(int i=0;i<n;i++){
     res[i]=prefix*nums[i];
@@ -90,10 +90,10 @@ for(int i=n-1;i>0;i--){
     suffix*=nums[i];
 }
 res[0]=suffix;
-
+return res;
  }
  public static void main(String args[]){
-    Scanner sc=new Scanner();
+    Scanner sc=new Scanner(System.in);
     int nums[]={1,2,3,4};
     int res[]=findproduct2(nums);
     for(int i:res){
